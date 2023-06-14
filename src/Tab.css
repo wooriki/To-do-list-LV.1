@@ -86,7 +86,9 @@ input {
     border-radius: 20px;
 }
 .user-tab:hover {
+    width: 253px;
     background-color: rgb(255, 255, 255);
+    border: 4px solid rgba(38, 154, 23, 0.69);
 }
 .tab-title {
     font-size: 18px;
@@ -96,7 +98,7 @@ input {
     font-size: 14px;
 }
 .btns {
-    margin-top: 10px;
+    margin-top: 8px;
     display: flex;
     gap: 10px;
 }

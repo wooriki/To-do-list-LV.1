@@ -2,29 +2,9 @@ import React from "react";
 import { useState } from "react";
 import "./Tab.css";
 
-function DefaultBtn(props) {
-    return <button onClick={props.onClick}>{props.children}</button>;
-}
+import DefaultBtn from "./components/DefaultBtn";
+import Tabs from "./components/Tabs";
 
-function Tabs(props) {
-    const { tab, deleBtn, toggleBtn } = props;
-    const { id, title, detail, isDone } = tab;
-
-    return (
-        <div className={`user-tab ${isDone ? "complete" : ""}`}>
-            <div className="tab-title">{title}</div>
-            <div className="tab-detail">{detail}</div>
-            <div className="btns">
-                <DefaultBtn className="redBtn" onClick={() => deleBtn(id)}>
-                    삭제
-                </DefaultBtn>
-                <DefaultBtn className="blueBtn" onClick={() => toggleBtn(id)}>
-                    {isDone ? "취소" : "완료"}
-                </DefaultBtn>
-            </div>
-        </div>
-    );
-}
 const App = () => {
     const [tabs, setTabs] = useState([
         {
