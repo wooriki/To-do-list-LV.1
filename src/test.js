@@ -47,22 +47,22 @@ function App() {
         const newTodo = todo.filter((todo) => todo.id !== id);
         setTodo(newTodo);
     };
-    const passHandler = (props) => {
-        const newTodo2 = todo.isDone ? "취소" : "완료";
-        // console.log(newTodo2);
+    // const passHandler = (props) => {
+    //     const newTodo2 = todo.isDone ? "취소" : "완료";
+    //     // console.log(newTodo2);
 
-        function completeBtn() {
-            todo({ isDone: true });
-        }
-        function cancelBtn() {
-            todo({ isDone: false });
-        }
-        const todosIsDone = todo.isDone;
-        let changebtn;
-        if (todosIsDone) {
-            changebtn = <completeBtn />;
-        }
-    };
+    //     function completeBtn() {
+    //         todo({ isDone: true });
+    //     }
+    //     function cancelBtn() {
+    //         todo({ isDone: false });
+    //     }
+    //     const todosIsDone = todo.isDone;
+    //     let changebtn;
+    //     if (todosIsDone) {
+    //         changebtn = <completeBtn />;
+    //     }
+    // };
 
     return (
         <div className="bodyTag">
