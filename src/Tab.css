@@ -13,9 +13,19 @@
 .app-header {
     margin-top: 25px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
-
+.app-header > h1 {
+    width: 95px;
+    font-size: 18px;
+}
+.app-header > h1:first-child {
+    margin-left: 10px;
+}
+.app-header > h1:last-child {
+    margin-right: 10px;
+    text-align: right;
+}
 .app-input {
     margin-top: 10px;
     display: flex;
@@ -27,22 +37,31 @@
     font-size: 20px;
     font-weight: 600;
 }
-
+.title-lable,
+.detail-lable {
+    margin: 0 10px 0 20px;
+}
+.app-input button {
+    margin-right: 10px;
+    background-color: rgb(38, 154, 23);
+    width: 160px;
+    letter-spacing: 1px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+.app-input button:hover {
+    background-color: rgb(16, 114, 3);
+}
 input {
+    margin: 0;
     width: 200px;
     height: 35px;
     border: none;
     border-radius: 10px;
-}
-
-.register {
-    background-color: rgb(38, 154, 23);
-    padding: 10px;
-    border-radius: 5px;
-    color: white;
-}
-.register:hover {
-    background-color: rgb(16, 114, 3);
+    text-indent: 1em;
 }
 
 .tab-body {
@@ -82,30 +101,30 @@ input {
     gap: 10px;
 }
 
-.redBtn {
+.btns > button:first-child {
     background-color: rgb(255, 122, 122);
     color: white;
     border: none;
-    padding: 5px 10px 10px 10px;
+    padding: 8px 10px 10px 10px;
     width: 95px;
     height: 30px;
     border-radius: 5px;
     text-align: center;
 }
-.redBtn:hover {
+.btns > button:first-child:hover {
     background-color: rgb(244, 45, 45);
 }
 
-.blueBtn {
+.btns > button:last-child {
     background-color: rgb(37, 184, 200);
     color: white;
     border: none;
-    padding: 5px 10px 10px 10px;
+    padding: 8px 10px 10px 10px;
     width: 95px;
     height: 30px;
     border-radius: 5px;
     text-align: center;
 }
-.blueBtn:hover {
+.btns > button:last-child:hover {
     background-color: rgb(8, 161, 212);
 }

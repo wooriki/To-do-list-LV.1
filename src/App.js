@@ -2,8 +2,8 @@ import React from "react";
 import { useState } from "react";
 import "./Tab.css";
 
-function defaultBtn(props) {
-    return <button ocClick={props.onClick}>{props.children}</button>;
+function DefaultBtn(props) {
+    return <button onClick={props.onClick}>{props.children}</button>;
 }
 
 function Tabs(props) {
@@ -15,12 +15,12 @@ function Tabs(props) {
             <div className="tab-title">{title}</div>
             <div className="tab-detail">{detail}</div>
             <div className="btns">
-                <defaultBtn className="redBtn" onClick={() => deleBtn(id)}>
+                <DefaultBtn className="redBtn" onClick={() => deleBtn(id)}>
                     삭제
-                </defaultBtn>
-                <defaultBtn className="blueBtn" onClick={() => toggleBtn(id)}>
+                </DefaultBtn>
+                <DefaultBtn className="blueBtn" onClick={() => toggleBtn(id)}>
                     {isDone ? "취소" : "완료"}
-                </defaultBtn>
+                </DefaultBtn>
             </div>
         </div>
     );
@@ -29,12 +29,18 @@ const App = () => {
     const [tabs, setTabs] = useState([
         {
             id: 1,
-            title: "리액트 공부하기",
-            detail: "리액트 기초에 대하여",
+            title: "React 공부하기",
+            detail: "React 기초에 대하여",
             isDone: false,
         },
         {
             id: 2,
+            title: "JS 공부하기",
+            detail: "문제 풀기 & 복습",
+            isDone: false,
+        },
+        {
+            id: 3,
             title: "러닝 40분",
             detail: "3:1 비율로 인터벌",
             isDone: false,
@@ -84,19 +90,18 @@ const App = () => {
                 <h1>React</h1>
             </div>
             <div className="app-input">
-                <lable className="title-lable">제목</lable>
+                <label className="title-lable">제목</label>
                 <input
+                    autoFocus
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                 />
-                <lable className="detail-lable">내용</lable>
+                <label className="detail-lable">내용</label>
                 <input
                     value={detail}
                     onChange={(e) => setDetail(e.target.value)}
                 />
-                <defaultBtn className="register" onClick={addHandler}>
-                    등록하기
-                </defaultBtn>
+                <DefaultBtn onClick={addHandler}>등록하기</DefaultBtn>
             </div>
             <h1 style={{ padding: "10px 0 0 20px" }}>Working On 🔥</h1>
             <div className="tab-body">
