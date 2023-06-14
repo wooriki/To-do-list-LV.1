@@ -36,6 +36,7 @@
     border-radius: 10px;
     font-size: 20px;
     font-weight: 600;
+    box-shadow: 3px 5px 12px 5px rgba(0, 0, 0, 0.144);
 }
 .title-lable,
 .detail-lable {
@@ -84,6 +85,7 @@ input {
     text-align: left;
     border: 4px solid rgba(38, 154, 23, 0.338);
     border-radius: 20px;
+    box-shadow: 3px 5px 12px 5px rgba(0, 0, 0, 0.144);
 }
 .user-tab:hover {
     width: 253px;
