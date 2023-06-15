@@ -6,27 +6,27 @@
     font-family: "Do Hyeon", sans-serif;
 }
 
-.app-body {
+.appBody {
     width: 1200px;
     min-width: 800px;
 }
-.app-header {
+.appHeader {
     margin-top: 25px;
     display: flex;
     justify-content: flex-end;
 }
-.app-header > h1 {
+.appHeader > h1 {
     width: 95px;
     font-size: 18px;
 }
-.app-header > h1:first-child {
+.appHeader > h1:first-child {
     margin-left: 10px;
 }
-.app-header > h1:last-child {
+.appHeader > h1:last-child {
     margin-right: 10px;
     text-align: right;
 }
-.app-input {
+.appInput {
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
@@ -38,11 +38,11 @@
     font-weight: 600;
     box-shadow: 3px 5px 12px 5px rgba(0, 0, 0, 0.144);
 }
-.title-lable,
-.detail-lable {
+.titleLable,
+.detailLable {
     margin: 0 10px 0 20px;
 }
-.app-input button {
+.appInput button {
     margin-right: 10px;
     background-color: rgb(41, 149, 27);
     width: 160px;
@@ -54,7 +54,7 @@
     font-size: 16px;
     box-shadow: 3px 5px 12px 5px rgba(0, 0, 0, 0.144);
 }
-.app-input button:hover {
+.appInput button:hover {
     background-color: rgb(21, 176, 0);
 }
 input {
@@ -66,19 +66,19 @@ input {
     text-indent: 1em;
 }
 
-.tab-body {
+.tabBody {
     margin: 10px 0 20px 0;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
 }
-.done-body {
+.doneBody {
     margin: 10px 0 20px 0;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
 }
-.user-tab {
+.userTab {
     margin: auto;
     width: 250px;
     height: 130px;
@@ -89,15 +89,16 @@ input {
     border-radius: 20px;
     box-shadow: 3px 5px 12px 5px rgba(0, 0, 0, 0.144);
 }
-.user-tab:hover {
+.userTab:hover {
     width: 253px;
     background-color: rgb(255, 255, 255);
     border: 4px solid rgba(38, 154, 23, 0.69);
+    box-shadow: 3px 5px 10px 5px rgba(0, 0, 0, 0.244);
 }
-.tab-title {
+.tabTitle {
     font-size: 18px;
 }
-.tab-detail {
+.tabDetail {
     margin-top: 10px;
     font-size: 14px;
 }

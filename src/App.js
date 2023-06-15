@@ -34,14 +34,14 @@ const App = () => {
     const [detail, setDetail] = useState("");
 
     // 초기값 tabs 이후에 추가되는 tabs을 만들어줄 함수를 선언해준다;
-    // id는 기존 tabs의 길이에 +1 씩 더해주기;
-    // isDone : false는 초기값으로 지정;
     const addHandler = () => {
         if (title === "") {
             alert("제목을 입력해 주세요.");
         } else if (detail === "") {
-            alert("설명을 입력해 주세요.");
+            alert("내용을 입력해 주세요.");
         } else {
+            // id는 기존 tabs의 길이에 +1 씩 더해주기;
+            // isDone : false는 초기값으로 지정;
             const newTab = {
                 id: tabs.length + 1,
                 title: title,
@@ -51,14 +51,14 @@ const App = () => {
             // 기존 tabs(...스프레드 배열) 뒤에 새로 들어갈 newTab 추가
             setTabs([...tabs, newTab]);
 
-            // 추가된 후 input의 내부는 초기화 해주기 ("");
+            // 추가된 후 input의 내부는 비워주기 ("");
             setTitle("");
             setDetail("");
         }
     };
     // delete 버튼 함수 선언해주기;
     // 다른 이름으로 새로운 선언을 해줘야 하는데 여러 이름으로 선언하다 보면 헷갈릴거 같아서 [2]만 붙였다;
-    // tabs를 filter 해준다 //  (!== id) 는 id가 아닌 값만 필터해줘;
+    // tabs를 filter 해준다 //  (!==id) 는 id가 아닌 값만 필터해줘;
     // 변경된 Tabs / setTabs에 이 filterd된 선언을 넣어준다;
     // id에 해당하지 않는 값만 남긴 결과를 보여준다;
     const deleBtn = (id) => {
@@ -87,19 +87,19 @@ const App = () => {
     const finallyDoneTab = tabs.filter((tab) => tab.isDone);
 
     return (
-        <div className="app-body">
-            <header className="app-header">
+        <div className="appBody">
+            <header className="appHeader">
                 <h1>My ToDoList</h1>
                 <h1>React</h1>
             </header>
-            <div className="app-input">
-                <label className="title-lable">제목</label>
+            <div className="appInput">
+                <label className="titleLable">제목</label>
                 <input
                     autoFocus
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                 />
-                <label className="detail-lable">내용</label>
+                <label className="detailLable">내용</label>
                 <input
                     value={detail}
                     onChange={(e) => setDetail(e.target.value)}
@@ -107,7 +107,7 @@ const App = () => {
                 <DefaultBtn onClick={addHandler}>등록하기</DefaultBtn>
             </div>
             <h1 style={{ padding: "10px 0 0 20px" }}>Working On 🔥</h1>
-            <div className="tab-body">
+            <div className="tabBody">
                 {workingOnTab.map((tab) => (
                     <Tabs
                         tab={tab}
@@ -118,7 +118,7 @@ const App = () => {
                 ))}
             </div>
             <h1 style={{ padding: "10px 0 0 20px" }}>Finally Done 🎉🎉</h1>
-            <div className="done-body">
+            <div className="doneBody">
                 {finallyDoneTab.map((tab) => (
                     <Tabs
                         tab={tab}

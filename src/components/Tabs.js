@@ -9,9 +9,9 @@ function Tabs(props) {
     // 삼항연산자를 사용했다;
     // className isDone 값이 참이면 complete 아니면 ""빈값 반환
     return (
-        <div className={`user-tab ${isDone ? "complete" : ""}`}>
-            <div className="tab-title">{title}</div>
-            <div className="tab-detail">{detail}</div>
+        <div className={`userTab ${isDone ? "complete" : ""}`}>
+            <div className="tabTitle">{title}</div>
+            <div className="tabDetail">{detail}</div>
             <div className="btns">
                 <DefaultBtn className="redBtn" onClick={() => deleBtn(id)}>
                     삭제
