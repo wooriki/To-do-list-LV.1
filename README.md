@@ -2,7 +2,7 @@ DefaultBtn 컴포넌트로 추출
 
 Tabs 컴포넌트로 추출 :
 tab과 delBtn, toggleBtn을 props로 받고
-tab에는 id, title, detail, isDone 값이 저장되어있다.
+tab 내부에는 id, title, detail, isDone 가 있다.
 
 DefaultBtn (기본버튼)을 불러와서 각 버튼마다 삽입.
 각 버튼이 클릭될 때 마다 실행되는 함수는 다르며,
