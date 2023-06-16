@@ -35,26 +35,24 @@ const App = () => {
 
     // 초기값 tabs 이후에 추가되는 tabs을 만들어줄 함수를 선언해준다;
     const addHandler = () => {
-        if (title === "") {
-            alert("제목을 입력해 주세요.");
-        } else if (detail === "") {
-            alert("내용을 입력해 주세요.");
-        } else {
-            // id는 기존 tabs의 길이에 +1 씩 더해주기;
-            // isDone : false는 초기값으로 지정;
-            const newTab = {
-                id: tabs.length + 1,
-                title: title,
-                detail: detail,
-                isDone: false,
-            };
-            // 기존 tabs(...스프레드 배열) 뒤에 새로 들어갈 newTab 추가
-            setTabs([...tabs, newTab]);
-
-            // 추가된 후 input의 내부는 비워주기 ("");
-            setTitle("");
-            setDetail("");
+        if (title === "" || detail === "") {
+            alert("입력란을 채워 주세요.");
+            return;
         }
+        // id는 기존 tabs의 길이에 +1 씩 더해주기;
+        // isDone : false는 초기값으로 지정;
+        const newTab = {
+            id: tabs.length + 1,
+            title: title,
+            detail: detail,
+            isDone: false,
+        };
+        // 기존 tabs(...스프레드 배열) 뒤에 새로 들어갈 newTab 추가
+        setTabs([...tabs, newTab]);
+
+        // 추가된 후 input의 내부는 비워주기 ("");
+        setTitle("");
+        setDetail("");
     };
     // delete 버튼 함수 선언해주기;
     // 다른 이름으로 새로운 선언을 해줘야 하는데 여러 이름으로 선언하다 보면 헷갈릴거 같아서 [2]만 붙였다;
